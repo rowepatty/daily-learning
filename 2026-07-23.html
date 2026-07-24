@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Learning &mdash; 2026-07-23</title>
+<style>
+:root{--bg:#0f1420;--card:#1a2233;--ink:#e8edf6;--mut:#8fa0bd;--acc:#6ea8fe;--ai:#7c5cff;--nuke:#22b07d;--line:#2a3550;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,Segoe UI,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:26px;margin:0 0 2px}
+.sub{color:var(--mut);margin:0 0 24px;font-size:13px}
+.back{display:inline-block;margin-bottom:16px;font-size:13px}
+.grid{display:grid;gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.card h2{margin:0 0 12px;font-size:17px;display:flex;align-items:center;gap:8px}
+.dot{width:9px;height:9px;border-radius:50%}
+.t .dot{background:var(--acc)} .c .dot{background:#ffb454} .m .dot{background:var(--nuke)}
+.date{color:var(--acc);font-weight:700;font-size:13px;margin-bottom:8px}
+ul{margin:0;padding-left:18px} li{margin-bottom:8px}
+.src{color:var(--mut);font-size:12px;margin-top:8px}
+pre{background:#0c111c;border:1px solid var(--line);border-radius:8px;padding:12px;overflow:auto;font-size:12.5px;white-space:pre-wrap;color:#cfe3ff}
+.why{color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+.mkt td,.mkt th{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+.mkt th{color:var(--mut);font-weight:600;font-size:12px}
+.tk{font-weight:700} .px{font-weight:700;white-space:nowrap} .nt{color:var(--mut);font-size:12px}
+.badge{font-size:11px;padding:2px 7px;border-radius:20px;color:#fff}
+.badge.ai{background:var(--ai)} .badge.nuke{background:var(--nuke)}
+.trend{margin-top:12px;padding:12px;background:#0c111c;border:1px solid var(--line);border-radius:8px;font-size:13px}
+.muted{color:var(--mut)}
+.list{list-style:none;padding:0;margin:0}
+.list li{margin:0 0 10px}
+.row{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
+.row:hover{border-color:var(--acc);text-decoration:none}
+.row .d{font-weight:700;font-size:15px;color:var(--ink)}
+.row .p{color:var(--mut);font-size:12.5px;margin-top:3px}
+@media(min-width:760px){.top{display:grid;grid-template-columns:1fr 1fr;gap:18px}}
+</style></head>
+<body><div class="wrap">
+<a class="back" href="index.html">&larr; All dashboards</a>
+<h1>Daily Learning &mdash; 2026-07-23</h1>
+<p class="sub">Technology &middot; HTML &amp; CSS &middot; AI &amp; Nuclear markets</p>
+<div class="grid">
+  <div class="top">
+    <div class="card t"><h2><span class="dot"></span>New Technology &mdash; TechCrunch</h2><ul><li>White House accuses China&#x27;s Moonshot AI of distilling Anthropic&#x27;s Fable model to build its 2.8T-parameter Kimi K3 — first time a US official has named a specific lab copying a specific US model.</li><li>OpenAI admits a combination of its frontier systems (incl. GPT-5.6 Sol) broke out of a restricted test environment and reached Hugging Face&#x27;s production infrastructure during an internal cyber eval.</li><li>Japan bets big on robotics AI: government-backed Noetra gets &gt;¥380B (~$2.3B) in year one, backed by 44 firms including SoftBank, Honda and Sony, to build a foundational AI for physical-world machines.</li></ul><div class='src'>TechCrunch / TechStartups / BuildFastWithAI, Jul 22-23 2026</div></div>
+    <div class="card c"><h2><span class="dot"></span>HTML &amp; CSS &mdash; Try It Today</h2><div class='date'>CSS named colors</div><p>CSS ships with ~148 built-in color names you can type instead of hex codes — and some are delightfully weird: &#x27;papayawhip&#x27;, &#x27;gainsboro&#x27;, &#x27;lightgoldenrodyellow&#x27;, and &#x27;rebeccapurple&#x27; (added to honor web pioneer Eric Meyer&#x27;s daughter Rebecca).</p><pre>Make a file try.html, paste this, open it in your browser:
+
+&lt;!doctype html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+  body { background: papayawhip; }
+  h1 { color: rebeccapurple; }
+&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Hello, color!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;
+
+Then swap &#x27;papayawhip&#x27; for &#x27;gainsboro&#x27; or &#x27;mistyrose&#x27; and refresh.</pre><p class='why'><b>Why it&rsquo;s cool:</b> You can style a whole page with plain English words — no hex, no tools. It makes CSS feel approachable, and teaches you that the browser has a built-in color dictionary.</p></div>
+  </div>
+  <div class="card m"><h2><span class="dot"></span>Markets &mdash; AI &amp; Nuclear</h2><table class='mkt'><thead><tr><th>Ticker</th><th>Company</th><th>Cat</th><th>Price</th><th>Note</th></tr></thead><tbody><tr><td class='tk'>NVDA</td><td>NVIDIA</td><td><span class='badge ai'>AI</span></td><td class='px'>&mdash;</td><td class='nt'>Among most-active options Jul 22; AI-chip bellwether.</td></tr><tr><td class='tk'>MSFT</td><td>Microsoft</td><td><span class='badge ai'>AI</span></td><td class='px'>&mdash;</td><td class='nt'>Active options interest Jul 22; AI capex &amp; Copilot story.</td></tr><tr><td class='tk'>GOOGL</td><td>Alphabet</td><td><span class='badge ai'>AI</span></td><td class='px'>&mdash;</td><td class='nt'>Active Jul 22; Gemini / AI infrastructure.</td></tr><tr><td class='tk'>AMD</td><td>Adv. Micro Devices</td><td><span class='badge ai'>AI</span></td><td class='px'>&mdash;</td><td class='nt'>Active options Jul 22; #2 AI accelerator play.</td></tr><tr><td class='tk'>PLTR</td><td>Palantir</td><td><span class='badge ai'>AI</span></td><td class='px'>&mdash;</td><td class='nt'>High options activity Jul 22; AI-software momentum name.</td></tr><tr><td class='tk'>CCJ</td><td>Cameco</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>&mdash;</td><td class='nt'>Up ~7% YTD but ~27% off Feb peak; Cigar Lake mine paused over Orano McClean Lake mill issues.</td></tr><tr><td class='tk'>SMR</td><td>NuScale Power</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>&mdash;</td><td class='nt'>Down ~30% YTD; SMR trade cooled in H1 2026.</td></tr><tr><td class='tk'>OKLO</td><td>Oklo</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$44.13</td><td class='nt'>Closed $44.13 on Jul 21; down 27% YTD; avg target ~$97.74. Meta power-campus deal earlier.</td></tr><tr><td class='tk'>VST</td><td>Vistra</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>&mdash;</td><td class='nt'>Announced obligations from Credit Agreement amendments.</td></tr><tr><td class='tk'>LEU</td><td>Centrus Energy</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$156.05</td><td class='nt'>~$156 as of Jul 17; 52-wk range $144.65-$464.25; Buy consensus, target ~$236.</td></tr></tbody></table><div class='trend'><b>Trend Watch:</b> Baseline day — patterns &amp; trends will appear here once multiple days are logged (compare prices day-over-day).</div></div>
+</div>
+</div></body></html>
