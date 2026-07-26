@@ -39,6 +39,25 @@ table{width:100%;border-collapse:collapse;font-size:13px}
 </style></head>
 <body><div class="wrap">
 <h1>Daily Learning Dashboards</h1>
-<p class="sub">3 day(s) logged &middot; newest first &middot; auto-published each morning</p>
-<ul class="list"><li><a class='row' href='2026-07-25.html'><span class='d'>2026-07-25</span><span class='p'>CSS: :hover + transition (pure-CSS interactivity) &middot; Anthropic launched Opus 5, the newest model in its Claude 5 family, co…</span></a></li><li><a class='row' href='2026-07-24.html'><span class='d'>2026-07-24</span><span class='p'>CSS: Flexbox centering &middot; AMD stormed Nvidia&#x27;s turf at its Advancing AI 2026 event, launching th…</span></a></li><li><a class='row' href='2026-07-23.html'><span class='d'>2026-07-23</span><span class='p'>CSS: CSS named colors &middot; White House accuses China&#x27;s Moonshot AI of distilling Anthropic&#x27;s Fabl…</span></a></li></ul>
+<p class="sub"><span id="daycount">3</span> day(s) logged &middot; newest first &middot; auto-published each morning</p>
+<ul class="list" id="daylist"><li><a class='row' href='2026-07-25.html'><span class='d'>2026-07-25</span><span class='p'>CSS: :hover + transition (pure-CSS interactivity) &middot; Anthropic launched Opus 5, the newest model in its Claude 5 family, co…</span></a></li><li><a class='row' href='2026-07-24.html'><span class='d'>2026-07-24</span><span class='p'>CSS: Flexbox centering &middot; AMD stormed Nvidia&#x27;s turf at its Advancing AI 2026 event, launching th…</span></a></li><li><a class='row' href='2026-07-23.html'><span class='d'>2026-07-23</span><span class='p'>CSS: CSS named colors &middot; White House accuses China&#x27;s Moonshot AI of distilling Anthropic&#x27;s Fabl…</span></a></li></ul>
+<script>
+(async function () {
+  /* Re-render the day list from dates.json, bypassing all caches:
+     - the ?_=timestamp query string makes the URL unique, defeating CDN caching
+     - cache:'no-store' tells the browser not to reuse its local copy
+     The static list already in the HTML remains as a fallback if this fails. */
+  try {
+    var r = await fetch('dates.json?_=' + Date.now(), {cache: 'no-store'});
+    if (!r.ok) return;
+    var days = await r.json();
+    if (!Array.isArray(days) || days.length === 0) return;
+    document.getElementById('daylist').innerHTML = days.map(function (x) {
+      return '<li><a class="row" href="' + x.date + '.html"><span class="d">'
+        + x.date + '</span><span class="p">' + x.preview + '</span></a></li>';
+    }).join('');
+    document.getElementById('daycount').textContent = days.length;
+  } catch (e) { /* offline or fetch blocked: keep the baked-in list */ }
+})();
+</script>
 </div></body></html>
