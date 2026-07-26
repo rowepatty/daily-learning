@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Learning &mdash; 2026-07-25</title>
+<style>
+:root{--bg:#0f1420;--card:#1a2233;--ink:#e8edf6;--mut:#8fa0bd;--acc:#6ea8fe;--ai:#7c5cff;--nuke:#22b07d;--line:#2a3550;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,Segoe UI,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:26px;margin:0 0 2px}
+.sub{color:var(--mut);margin:0 0 24px;font-size:13px}
+.back{display:inline-block;margin-bottom:16px;font-size:13px}
+.grid{display:grid;gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.card h2{margin:0 0 12px;font-size:17px;display:flex;align-items:center;gap:8px}
+.dot{width:9px;height:9px;border-radius:50%}
+.t .dot{background:var(--acc)} .c .dot{background:#ffb454} .m .dot{background:var(--nuke)}
+.date{color:var(--acc);font-weight:700;font-size:13px;margin-bottom:8px}
+ul{margin:0;padding-left:18px} li{margin-bottom:8px}
+.src{color:var(--mut);font-size:12px;margin-top:8px}
+pre{background:#0c111c;border:1px solid var(--line);border-radius:8px;padding:12px;overflow:auto;font-size:12.5px;white-space:pre-wrap;color:#cfe3ff}
+.why{color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+.mkt td,.mkt th{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+.mkt th{color:var(--mut);font-weight:600;font-size:12px}
+.tk{font-weight:700} .px{font-weight:700;white-space:nowrap} .nt{color:var(--mut);font-size:12px}
+.badge{font-size:11px;padding:2px 7px;border-radius:20px;color:#fff}
+.badge.ai{background:var(--ai)} .badge.nuke{background:var(--nuke)}
+.trend{margin-top:12px;padding:12px;background:#0c111c;border:1px solid var(--line);border-radius:8px;font-size:13px}
+.muted{color:var(--mut)}
+.list{list-style:none;padding:0;margin:0}
+.list li{margin:0 0 10px}
+.row{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
+.row:hover{border-color:var(--acc);text-decoration:none}
+.row .d{font-weight:700;font-size:15px;color:var(--ink)}
+.row .p{color:var(--mut);font-size:12.5px;margin-top:3px}
+@media(min-width:760px){.top{display:grid;grid-template-columns:1fr 1fr;gap:18px}}
+</style></head>
+<body><div class="wrap">
+<a class="back" href="index.html">&larr; All dashboards</a>
+<h1>Daily Learning &mdash; 2026-07-25</h1>
+<p class="sub">Technology &middot; HTML &amp; CSS &middot; AI &amp; Nuclear markets</p>
+<div class="grid">
+  <div class="top">
+    <div class="card t"><h2><span class="dot"></span>New Technology &mdash; TechCrunch</h2><ul><li>Anthropic launched Opus 5, the newest model in its Claude 5 family, continuing the rapid-fire pace of frontier AI releases this summer.</li><li>Defense-tech startup Anduril is reportedly in talks to raise new funding at a $100B valuation - more than triple last year&#x27;s mark - underscoring how hot defense tech has become.</li><li>Rivian sued the US government demanding a &#x27;full refund&#x27; of Trump-era tariffs it paid on imported parts, a rare legal challenge from an automaker against trade policy.</li></ul><div class='src'>TechCrunch, Jul 24-25 2026</div></div>
+    <div class="card c"><h2><span class="dot"></span>HTML &amp; CSS &mdash; Try It Today</h2><div class='date'>:hover + transition (pure-CSS interactivity)</div><p>CSS elements can react to your mouse with the :hover pseudo-class - and adding one &#x27;transition&#x27; line makes the change animate smoothly instead of snapping. People assume you need JavaScript for interactive buttons; you don&#x27;t.</p><pre>Save as hover.html and open it:
+
+&lt;!doctype html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+  .btn {
+    display: inline-block;
+    padding: 16px 32px;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: white;
+    background: tomato;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  .btn:hover {
+    background: rebeccapurple;
+    transform: scale(1.15) rotate(-2deg);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  }
+&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&quot;btn&quot;&gt;Hover over me!&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;
+
+Try changing 0.3s to 2s, or rotate(-2deg) to rotate(360deg), and refresh.</pre><p class='why'><b>Why it&rsquo;s cool:</b> One selector and one transition line give you a living, animated button with zero JavaScript - it&#x27;s the moment a page stops feeling like a document and starts feeling like an app.</p></div>
+  </div>
+  <div class="card m"><h2><span class="dot"></span>Markets &mdash; AI &amp; Nuclear</h2><table class='mkt'><thead><tr><th>Ticker</th><th>Company</th><th>Cat</th><th>Price</th><th>Note</th></tr></thead><tbody><tr><td class='tk'>NVDA</td><td>NVIDIA</td><td><span class='badge ai'>AI</span></td><td class='px'>$206.84</td><td class='nt'>Closed $206.84 (-0.9%) Jul 24; chip industry, incl. Nvidia&#x27;s ecosystem, urged Washington against broad open-weight AI export restrictions.</td></tr><tr><td class='tk'>MSFT</td><td>Microsoft</td><td><span class='badge ai'>AI</span></td><td class='px'>$381.7</td><td class='nt'>Closed $381.70 (flat) Jul 24, steady ahead of Q4 earnings Jul 29; named in the $200M US initiative to speed nuclear reactors for AI.</td></tr><tr><td class='tk'>GOOGL</td><td>Alphabet</td><td><span class='badge ai'>AI</span></td><td class='px'>$319.74</td><td class='nt'>Closed $319.74 (+0.2%) Jul 24, stabilizing after Thursday&#x27;s ~7% capex-shock plunge.</td></tr><tr><td class='tk'>AMD</td><td>Adv. Micro Devices</td><td><span class='badge ai'>AI</span></td><td class='px'>$521.95</td><td class='nt'>Closed $521.95 (-3.3%) Jul 24, giving back part of its Helios-launch rally.</td></tr><tr><td class='tk'>PLTR</td><td>Palantir</td><td><span class='badge ai'>AI</span></td><td class='px'>$122.92</td><td class='nt'>Closed $122.92 (-0.4%) Jul 24, pausing after Thursday&#x27;s 7% drop; earnings ahead.</td></tr><tr><td class='tk'>CCJ</td><td>Cameco</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$87.86</td><td class='nt'>Closed $87.86 (-1.65%) Jul 24; NYT flags its Westinghouse arm as a big winner from the US-Saudi nuclear deal; earnings Jul 31.</td></tr><tr><td class='tk'>SMR</td><td>NuScale Power</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$8.09</td><td class='nt'>Closed $8.09 (-8.2%) Jul 24 on heavy volume; Barclays cut its target to $11 from $15 ahead of the Aug 5 Q2 report.</td></tr><tr><td class='tk'>OKLO</td><td>Oklo</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$40.25</td><td class='nt'>Closed $40.25 (-8.5%) Jul 24, near its 52-week low, despite DOE startup authorization for its Groves reactor two days earlier.</td></tr><tr><td class='tk'>VST</td><td>Vistra</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$163.13</td><td class='nt'>Closed ~$163.13 (-3.5%) Jul 24 in the broad power-stock pullback; earnings Aug 6.</td></tr><tr><td class='tk'>LEU</td><td>Centrus Energy</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$163.89</td><td class='nt'>Closed $163.89 (-4.0%) Jul 24; Q2 conference call set for Aug 6.</td></tr></tbody></table><div class='trend'><b>Trend Watch:</b> Day 3, and the Jul 23 pattern flipped: nuclear, which held up during Thursday&#x27;s AI-capex selloff, got hit hard Friday - SMR -8.2% to $8.09, OKLO -8.5% to $40.25 (brushing its 52-week low of $39.53 despite winning DOE startup authorization), LEU -4.0%, VST -3.5%, CCJ -1.7%. AI names mostly stabilized instead: NVDA -0.9%, while MSFT, GOOGL and PLTR were roughly flat; AMD -3.3% was the AI outlier, giving back its Helios-launch pop. Two-day score: both groups are down, but the &#x27;nuclear is the safe haven&#x27; story lasted exactly one day.</div></div>
+</div>
+</div></body></html>
