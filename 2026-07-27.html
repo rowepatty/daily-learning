@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Learning &mdash; 2026-07-27</title>
+<style>
+:root{--bg:#0f1420;--card:#1a2233;--ink:#e8edf6;--mut:#8fa0bd;--acc:#6ea8fe;--ai:#7c5cff;--nuke:#22b07d;--line:#2a3550;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,Segoe UI,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:26px;margin:0 0 2px}
+.sub{color:var(--mut);margin:0 0 24px;font-size:13px}
+.back{display:inline-block;margin-bottom:16px;font-size:13px}
+.grid{display:grid;gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.card h2{margin:0 0 12px;font-size:17px;display:flex;align-items:center;gap:8px}
+.dot{width:9px;height:9px;border-radius:50%}
+.t .dot{background:var(--acc)} .c .dot{background:#ffb454} .m .dot{background:var(--nuke)}
+.date{color:var(--acc);font-weight:700;font-size:13px;margin-bottom:8px}
+ul{margin:0;padding-left:18px} li{margin-bottom:8px}
+.src{color:var(--mut);font-size:12px;margin-top:8px}
+pre{background:#0c111c;border:1px solid var(--line);border-radius:8px;padding:12px;overflow:auto;font-size:12.5px;white-space:pre-wrap;color:#cfe3ff}
+.why{color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+.mkt td,.mkt th{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+.mkt th{color:var(--mut);font-weight:600;font-size:12px}
+.tk{font-weight:700} .px{font-weight:700;white-space:nowrap} .nt{color:var(--mut);font-size:12px}
+.badge{font-size:11px;padding:2px 7px;border-radius:20px;color:#fff}
+.badge.ai{background:var(--ai)} .badge.nuke{background:var(--nuke)}
+.trend{margin-top:12px;padding:12px;background:#0c111c;border:1px solid var(--line);border-radius:8px;font-size:13px}
+.muted{color:var(--mut)}
+.list{list-style:none;padding:0;margin:0}
+.list li{margin:0 0 10px}
+.row{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
+.row:hover{border-color:var(--acc);text-decoration:none}
+.row .d{font-weight:700;font-size:15px;color:var(--ink)}
+.row .p{color:var(--mut);font-size:12.5px;margin-top:3px}
+@media(min-width:760px){.top{display:grid;grid-template-columns:1fr 1fr;gap:18px}}
+</style></head>
+<body><div class="wrap">
+<a class="back" href="index.html">&larr; All dashboards</a>
+<h1>Daily Learning &mdash; 2026-07-27</h1>
+<p class="sub">Technology &middot; HTML &amp; CSS &middot; AI &amp; Nuclear markets</p>
+<div class="grid">
+  <div class="top">
+    <div class="card t"><h2><span class="dot"></span>New Technology &mdash; TechCrunch</h2><ul><li>The panic over Chinese AI: Chinese lab Moonshot AI&#x27;s new Kimi model set off a fresh wave of worry about American competitiveness, and reignited the fight over whether open or closed AI models should lead. Big US firms (Nvidia, Microsoft, Meta, Palantir) just signed an open letter defending open models.</li><li>Monday.com became the latest tech company to blame AI for layoffs - TechCrunch is keeping a running list, and more than 20 employers have now cited AI as a reason for 2026 job cuts.</li><li>One fallen power line exposed a growing AI data-center problem: giant data centers can strain and destabilize the electric grid, and TechCrunch looks at what it would take to fix it - a story right at the intersection of AI and the power/nuclear boom.</li></ul><div class='src'>TechCrunch, July 25-26, 2026</div></div>
+    <div class="card c"><h2><span class="dot"></span>HTML &amp; CSS &mdash; Try It Today</h2><div class='date'>CSS gradients (linear-gradient)</div><p>CSS can paint smooth multi-color gradient backgrounds with one line of code - no image file needed. background: linear-gradient(45deg, red, blue) blends any colors you list, at any angle, and the browser draws it live.</p><pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+  body {
+    height: 100vh; margin: 0;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #a1c4fd);
+    display: flex; align-items: center; justify-content: center;
+  }
+  h1 {
+    font-family: sans-serif; color: white; font-size: 3em;
+    background: linear-gradient(90deg, purple, orange);
+    padding: 20px 40px; border-radius: 15px;
+  }
+&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Gradient magic!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;</pre><p class='why'><b>Why it&rsquo;s cool:</b> Gradients are how modern sites get that polished, colorful look without downloading a single image - they stay razor-sharp at any screen size, and changing one color or the angle instantly changes the whole mood of the page.</p></div>
+  </div>
+  <div class="card m"><h2><span class="dot"></span>Markets &mdash; AI &amp; Nuclear</h2><table class='mkt'><thead><tr><th>Ticker</th><th>Company</th><th>Cat</th><th>Price</th><th>Note</th></tr></thead><tbody><tr><td class='tk'>NVDA</td><td>NVIDIA</td><td><span class='badge ai'>AI</span></td><td class='px'>$208.5</td><td class='nt'>Launched an open AI security alliance with Microsoft, SpaceX and others after the Hugging Face hack; also reportedly in talks to backstop $250B of OpenAI data-center financing.</td></tr><tr><td class='tk'>MSFT</td><td>Microsoft</td><td><span class='badge ai'>AI</span></td><td class='px'>$388.09</td><td class='nt'>Up ~1.7% pre-market ahead of Wednesday&#x27;s (Jul 29) Q4 earnings, widely seen as the big test of whether its massive AI bet is paying off.</td></tr><tr><td class='tk'>GOOGL</td><td>Alphabet</td><td><span class='badge ai'>AI</span></td><td class='px'>$319.74</td><td class='nt'>Friday close (no fresh Monday quote); still digesting Thursday&#x27;s 7% capex-shock drop, while Verizon disclosed a $1B+ fiber deal for Google&#x27;s data centers.</td></tr><tr><td class='tk'>AMD</td><td>Advanced Micro Devices</td><td><span class='badge ai'>AI</span></td><td class='px'>$533.5</td><td class='nt'>Up ~2.2% pre-market on the Nvidia/AMD AI infrastructure push into South Korea; analysts keep raising targets after Advancing AI (Baird&#x27;s street-high $1,250).</td></tr><tr><td class='tk'>PLTR</td><td>Palantir</td><td><span class='badge ai'>AI</span></td><td class='px'>$125.35</td><td class='nt'>Up ~2% pre-market even as &#x27;Big Short&#x27; investor Michael Burry doubled down on his bet against the stock ahead of Aug 3 earnings; Palantir joined the new open AI security alliance.</td></tr><tr><td class='tk'>CCJ</td><td>Cameco</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$90.8</td><td class='nt'>Up ~3.4% pre-market after UBS upgraded it to Buy this morning, calling the recent selloff a buying opportunity; earnings due Jul 31.</td></tr><tr><td class='tk'>SMR</td><td>NuScale Power</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$8.32</td><td class='nt'>Bouncing ~2.8% pre-market after Friday&#x27;s 8% slide; Barclays cut its price target to $11 ahead of the Aug 5 report.</td></tr><tr><td class='tk'>OKLO</td><td>Oklo</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$41.43</td><td class='nt'>Rebounding ~2.9% pre-market; announced Aug 12 for Q2 results, a week after receiving DOE startup authorization for its Groves reactor.</td></tr><tr><td class='tk'>VST</td><td>Vistra</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$157.49</td><td class='nt'>Sold off Monday to ~$157.49 (prev close $163.38), the weakest of the nuclear/power group; day range $156.15-$164.55.</td></tr><tr><td class='tk'>LEU</td><td>Centrus Energy</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$167.85</td><td class='nt'>Up ~2.4% pre-market with the nuclear rebound, even as Roth Capital trimmed its price target to $171 this morning ahead of Q2 results.</td></tr></tbody></table><div class='trend'><b>Trend Watch:</b> First green morning in a week: after Friday&#x27;s risk-off drop hit nuclear hardest (OKLO -8.5%, SMR -8.2%, LEU -4.0% vs NVDA -0.9%), Monday&#x27;s pre-market shows the mirror image - nuclear is bouncing fastest (CCJ +3.4%, OKLO +2.9%, SMR +2.8%) while AI gains are milder (NVDA +0.8%). The smaller nuclear names keep swinging harder in BOTH directions than the megacap AI group - classic high-beta behavior. Watch Microsoft&#x27;s earnings Wednesday (Jul 29): the past two weeks&#x27; moves have been driven by AI-spending sentiment, and that report could set the next leg for both groups.</div></div>
+</div>
+</div></body></html>
