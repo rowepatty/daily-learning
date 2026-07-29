@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Learning &mdash; 2026-07-28</title>
+<style>
+:root{--bg:#0f1420;--card:#1a2233;--ink:#e8edf6;--mut:#8fa0bd;--acc:#6ea8fe;--ai:#7c5cff;--nuke:#22b07d;--line:#2a3550;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,Segoe UI,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:26px;margin:0 0 2px}
+.sub{color:var(--mut);margin:0 0 24px;font-size:13px}
+.back{display:inline-block;margin-bottom:16px;font-size:13px}
+.grid{display:grid;gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.card h2{margin:0 0 12px;font-size:17px;display:flex;align-items:center;gap:8px}
+.dot{width:9px;height:9px;border-radius:50%}
+.t .dot{background:var(--acc)} .c .dot{background:#ffb454} .m .dot{background:var(--nuke)}
+.date{color:var(--acc);font-weight:700;font-size:13px;margin-bottom:8px}
+ul{margin:0;padding-left:18px} li{margin-bottom:8px}
+.src{color:var(--mut);font-size:12px;margin-top:8px}
+pre{background:#0c111c;border:1px solid var(--line);border-radius:8px;padding:12px;overflow:auto;font-size:12.5px;white-space:pre-wrap;color:#cfe3ff}
+.why{color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+.mkt td,.mkt th{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+.mkt th{color:var(--mut);font-weight:600;font-size:12px}
+.tk{font-weight:700} .px{font-weight:700;white-space:nowrap} .nt{color:var(--mut);font-size:12px}
+.badge{font-size:11px;padding:2px 7px;border-radius:20px;color:#fff}
+.badge.ai{background:var(--ai)} .badge.nuke{background:var(--nuke)}
+.trend{margin-top:12px;padding:12px;background:#0c111c;border:1px solid var(--line);border-radius:8px;font-size:13px}
+.muted{color:var(--mut)}
+.list{list-style:none;padding:0;margin:0}
+.list li{margin:0 0 10px}
+.row{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
+.row:hover{border-color:var(--acc);text-decoration:none}
+.row .d{font-weight:700;font-size:15px;color:var(--ink)}
+.row .p{color:var(--mut);font-size:12.5px;margin-top:3px}
+@media(min-width:760px){.top{display:grid;grid-template-columns:1fr 1fr;gap:18px}}
+</style></head>
+<body><div class="wrap">
+<a class="back" href="index.html">&larr; All dashboards</a>
+<h1>Daily Learning &mdash; 2026-07-28</h1>
+<p class="sub">Technology &middot; HTML &amp; CSS &middot; AI &amp; Nuclear markets</p>
+<div class="grid">
+  <div class="top">
+    <div class="card t"><h2><span class="dot"></span>New Technology &mdash; TechCrunch</h2><ul><li>Lyft and Baidu began robotaxi testing in London, putting a US ride-hailing app and a Chinese self-driving stack into Europe&#x27;s most contested driverless market. It sets up a direct fight with Waymo and Uber over the first big European robotaxi city.</li><li>Antares raised $470M to build small nuclear reactors for the U.S. military - one of the largest private nuclear rounds yet, aimed at powering remote bases with portable reactors instead of diesel generators.</li><li>Ilya Sutskever&#x27;s Safe Superintelligence signed a partnership with Nvidia to scale its AI research, giving the famously secretive lab a guaranteed supply of compute while Nvidia locks in another frontier-lab customer.</li></ul><div class='src'>TechCrunch, Jul 27-28 2026</div></div>
+    <div class="card c"><h2><span class="dot"></span>HTML &amp; CSS &mdash; Try It Today</h2><div class='date'>CSS custom properties (variables)</div><p>CSS lets you invent your own reusable values. Any name starting with two dashes - like --main: #6c3fc7 - declared inside :root becomes a variable you can reuse anywhere with var(--main). Change that one declaration and every place that used it updates instantly.</p><pre>Save as theme.html and open it:
+
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+  :root {
+    --main: #6c3fc7;
+    --soft: #f2ecff;
+    --radius: 14px;
+  }
+  body {
+    font-family: system-ui, sans-serif;
+    background: var(--soft);
+    padding: 40px;
+  }
+  .card {
+    background: white;
+    border: 3px solid var(--main);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  h1 { color: var(--main); }
+  .btn {
+    display: inline-block;
+    background: var(--main);
+    color: white;
+    padding: 10px 18px;
+    border-radius: var(--radius);
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;One variable rules them all&lt;/h1&gt;
+  &lt;div class=&quot;card&quot;&gt;This card&#x27;s border uses var(--main).&lt;/div&gt;
+  &lt;div class=&quot;card&quot;&gt;So does the heading, and the button below.&lt;/div&gt;
+  &lt;span class=&quot;btn&quot;&gt;A button&lt;/span&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+Now change ONLY this one line near the top:
+    --main: #6c3fc7;
+to
+    --main: #0f8f6f;
+Save, refresh the browser. The heading, both card borders and the button all change colour at once.</pre><p class='why'><b>Why it&rsquo;s cool:</b> It turns your stylesheet into a control panel: one line becomes the theme switch for the whole page, and you never have to hunt down the same hex code in fifteen different rules again.</p></div>
+  </div>
+  <div class="card m"><h2><span class="dot"></span>Markets &mdash; AI &amp; Nuclear</h2><table class='mkt'><thead><tr><th>Ticker</th><th>Company</th><th>Cat</th><th>Price</th><th>Note</th></tr></thead><tbody><tr><td class='tk'>NVDA</td><td>NVIDIA</td><td><span class='badge ai'>AI</span></td><td class='px'>$196.51</td><td class='nt'>Fell about 5% on reports it may guarantee $250B of financing for a 10-GW Ohio data center that OpenAI wants to lease, reviving circular-AI-financing worries.</td></tr><tr><td class='tk'>MSFT</td><td>Microsoft</td><td><span class='badge ai'>AI</span></td><td class='px'>$389.1</td><td class='nt'>Roughly flat in a $388-394 range as investors sit tight ahead of the Jul 29 earnings report and its cloud/AI capex numbers.</td></tr><tr><td class='tk'>GOOGL</td><td>Alphabet</td><td><span class='badge ai'>AI</span></td><td class='px'>$333.5</td><td class='nt'>Up about 2% and still rebounding from the post-earnings capex selloff; Phillip Securities upgraded it to Buy and YouTube inked a Peacock bundling deal with NBCUniversal.</td></tr><tr><td class='tk'>AMD</td><td>AMD</td><td><span class='badge ai'>AI</span></td><td class='px'>$494.95</td><td class='nt'>Worst AI name of the day, down about 8.9% on disappointing forward guidance for its AI accelerators; first move below $500 in this log.</td></tr><tr><td class='tk'>PLTR</td><td>Palantir</td><td><span class='badge ai'>AI</span></td><td class='px'>$130.8</td><td class='nt'>Held up better than the chipmakers, trading around $131 after a $124.60-$132.41 range.</td></tr><tr><td class='tk'>CCJ</td><td>Cameco</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$85.92</td><td class='nt'>Down about 3.4%, giving back Monday&#x27;s bounce as the whole uranium and nuclear complex followed AI hardware lower.</td></tr><tr><td class='tk'>SMR</td><td>NuScale Power</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$8.3</td><td class='nt'>Slipped about 2.8% and touched $7.80 intraday, hovering just above its $7.21 52-week low ahead of Aug 5 earnings.</td></tr><tr><td class='tk'>OKLO</td><td>Oklo</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$40.04</td><td class='nt'>Set a fresh 52-week low near $39.48 before steadying around $40; still the weakest chart in the nuclear group.</td></tr><tr><td class='tk'>VST</td><td>Vistra</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$149.5</td><td class='nt'>Down about 4.8% to roughly $149.50 on PJM price-cap proposals and insider selling, even as Morgan Stanley and UBS reiterated Buy with $212-$227 targets.</td></tr><tr><td class='tk'>LEU</td><td>Centrus Energy</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$168.05</td><td class='nt'>The only nuclear name roughly flat to up, trading near $168 in a wide $157.89-$171.00 range.</td></tr></tbody></table><div class='trend'><b>Trend Watch:</b> NVDA broke a week-long $206-209 shelf down to about $196.51 (-5.0%), the first real crack since this log began, and AMD fell harder still (-8.9% to roughly $495, its first print under $500 here) as investors soured on circular AI-financing deals. GOOGL was the lone AI gainer (+2.1% to about $333.50), so the AI trade is no longer moving as one block - chips are being punished while ad-and-cloud names rebound. Nuclear was dragged along rather than spared: VST has now fallen four straight sessions (169 to 149.50, about -12% since Jul 24) and OKLO tagged a fresh 52-week low, with only LEU (about $168) holding roughly flat.</div></div>
+</div>
+</div></body></html>
