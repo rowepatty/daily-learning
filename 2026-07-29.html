@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Learning &mdash; 2026-07-29</title>
+<style>
+:root{--bg:#0f1420;--card:#1a2233;--ink:#e8edf6;--mut:#8fa0bd;--acc:#6ea8fe;--ai:#7c5cff;--nuke:#22b07d;--line:#2a3550;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,Segoe UI,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:26px;margin:0 0 2px}
+.sub{color:var(--mut);margin:0 0 24px;font-size:13px}
+.back{display:inline-block;margin-bottom:16px;font-size:13px}
+.grid{display:grid;gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.card h2{margin:0 0 12px;font-size:17px;display:flex;align-items:center;gap:8px}
+.dot{width:9px;height:9px;border-radius:50%}
+.t .dot{background:var(--acc)} .c .dot{background:#ffb454} .m .dot{background:var(--nuke)}
+.date{color:var(--acc);font-weight:700;font-size:13px;margin-bottom:8px}
+ul{margin:0;padding-left:18px} li{margin-bottom:8px}
+.src{color:var(--mut);font-size:12px;margin-top:8px}
+pre{background:#0c111c;border:1px solid var(--line);border-radius:8px;padding:12px;overflow:auto;font-size:12.5px;white-space:pre-wrap;color:#cfe3ff}
+.why{color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+.mkt td,.mkt th{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+.mkt th{color:var(--mut);font-weight:600;font-size:12px}
+.tk{font-weight:700} .px{font-weight:700;white-space:nowrap} .nt{color:var(--mut);font-size:12px}
+.badge{font-size:11px;padding:2px 7px;border-radius:20px;color:#fff}
+.badge.ai{background:var(--ai)} .badge.nuke{background:var(--nuke)}
+.trend{margin-top:12px;padding:12px;background:#0c111c;border:1px solid var(--line);border-radius:8px;font-size:13px}
+.muted{color:var(--mut)}
+.list{list-style:none;padding:0;margin:0}
+.list li{margin:0 0 10px}
+.row{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
+.row:hover{border-color:var(--acc);text-decoration:none}
+.row .d{font-weight:700;font-size:15px;color:var(--ink)}
+.row .p{color:var(--mut);font-size:12.5px;margin-top:3px}
+@media(min-width:760px){.top{display:grid;grid-template-columns:1fr 1fr;gap:18px}}
+</style></head>
+<body><div class="wrap">
+<a class="back" href="index.html">&larr; All dashboards</a>
+<h1>Daily Learning &mdash; 2026-07-29</h1>
+<p class="sub">Technology &middot; HTML &amp; CSS &middot; AI &amp; Nuclear markets</p>
+<div class="grid">
+  <div class="top">
+    <div class="card t"><h2><span class="dot"></span>New Technology &mdash; TechCrunch</h2><ul><li>Data-security firm Cyera signed a letter of intent to buy Israeli startup Oasis Security for about $1 billion, mostly in cash. Oasis specialises in securing &#x27;non-human identities&#x27; - i.e. AI agents - and the deal is Cyera&#x27;s third acquisition this year as companies scramble to police what their AI agents are allowed to touch.</li><li>Waymo and other robotaxi operators are facing fresh federal scrutiny over how their driverless cars behave around ambulances, fire trucks and police at emergency scenes. Regulators are weighing new national requirements, which would be the first real rulebook for how autonomous vehicles must interact with first responders.</li><li>Nvidia signed leases worth up to $50 billion for a 1-gigawatt data centre that Hut 8 is building in Texas, per the Financial Times. It is another sign that Nvidia is no longer just selling AI chips - it is increasingly financing the buildings and power that house them.</li></ul><div class='src'>TechCrunch / Reuters / Financial Times, Jul 28-29 2026</div></div>
+    <div class="card c"><h2><span class="dot"></span>HTML &amp; CSS &mdash; Try It Today</h2><div class='date'>position: sticky (headings that stick as you scroll)</div><p>Add two lines of CSS - &#x27;position: sticky&#x27; and &#x27;top: 0&#x27; - and an element will scroll along normally until it reaches the top of the screen, then freeze there while the rest of the page keeps moving past it. It is the effect behind almost every app&#x27;s floating header and every spreadsheet&#x27;s frozen row, and for years it needed JavaScript. Now the browser does it for free, and it even knows to un-stick when its parent section scrolls out of view.</p><pre>Save as sticky.html and open it, then scroll slowly:
+
+&lt;!doctype html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+  body { font-family: sans-serif; margin: 0; }
+  h2 {
+    position: sticky;   /* the magic */
+    top: 0;             /* stick to the very top */
+    margin: 0;
+    padding: 12px 16px;
+    background: #2193b0;
+    color: white;
+  }
+  p { padding: 16px; line-height: 1.6; }
+&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;section&gt;
+    &lt;h2&gt;Chapter 1&lt;/h2&gt;
+    &lt;p&gt;Scroll down slowly and watch this heading stick to the top.&lt;/p&gt;
+    &lt;p&gt;Keep scrolling...&lt;/p&gt;
+    &lt;p&gt;Still Chapter 1...&lt;/p&gt;
+    &lt;p&gt;Almost there...&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;section&gt;
+    &lt;h2&gt;Chapter 2&lt;/h2&gt;
+    &lt;p&gt;Chapter 1&#x27;s heading got pushed away and this one took over.&lt;/p&gt;
+    &lt;p&gt;More text...&lt;/p&gt;
+    &lt;p&gt;And more...&lt;/p&gt;
+    &lt;p&gt;The end.&lt;/p&gt;
+  &lt;/section&gt;
+
+&lt;/body&gt;&lt;/html&gt;
+
+Try changing &#x27;top: 0&#x27; to &#x27;top: 40px&#x27; to make it stop 40 pixels down instead.</pre><p class='why'><b>Why it&rsquo;s cool:</b> It is a genuinely fancy app-like effect from two lines of CSS and zero JavaScript, and the way each heading politely shoves the previous one off screen is something the browser handles entirely on its own.</p></div>
+  </div>
+  <div class="card m"><h2><span class="dot"></span>Markets &mdash; AI &amp; Nuclear</h2><table class='mkt'><thead><tr><th>Ticker</th><th>Company</th><th>Cat</th><th>Price</th><th>Note</th></tr></thead><tbody><tr><td class='tk'>NVDA</td><td>NVIDIA</td><td><span class='badge ai'>AI</span></td><td class='px'>$192.5</td><td class='nt'>Down a fifth straight session and below $200 as the chip selloff extended; separately signed leases worth up to $50B for Hut 8&#x27;s 1GW Texas data centre.</td></tr><tr><td class='tk'>MSFT</td><td>Microsoft</td><td><span class='badge ai'>AI</span></td><td class='px'>$394.42</td><td class='nt'>Roughly flat ahead of fiscal Q4 earnings after the bell tonight; options imply a ~$190B market-value swing, and the UK&#x27;s CMA opened a probe into its Microsoft 365 subscription marketing.</td></tr><tr><td class='tk'>GOOGL</td><td>Alphabet</td><td><span class='badge ai'>AI</span></td><td class='px'>$333.71</td><td class='nt'>Rebounded 2.2% in the prior session as several analysts defended the AI-capex plan; YouTube&#x27;s new Peacock bundle with NBCUniversal added to the good news.</td></tr><tr><td class='tk'>AMD</td><td>Advanced Micro Devices</td><td><span class='badge ai'>AI</span></td><td class='px'>$431.73</td><td class='nt'>Worst performer of the day at -5.0%, caught in the same semiconductor selloff, even after locking up 2.5GW of data-centre capacity with Core Scientific in a ~$14B deal.</td></tr><tr><td class='tk'>PLTR</td><td>Palantir</td><td><span class='badge ai'>AI</span></td><td class='px'>$124.06</td><td class='nt'>Steadied with a small gain after a 9% drop on Tuesday, with Q2 earnings due Aug 3 and analysts split between $200 targets and Michael Burry&#x27;s short.</td></tr><tr><td class='tk'>CCJ</td><td>Cameco</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$85.39</td><td class='nt'>Off 1.8% and drifting toward the low $80s despite a UBS upgrade to Buy earlier this week; Q2 results land Jul 31.</td></tr><tr><td class='tk'>SMR</td><td>NuScale Power</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$8.08</td><td class='nt'>Slid another 3.8% on Tuesday to $8.22 and opened weaker again, sitting close to its 52-week low of $7.21 ahead of Aug 5 earnings.</td></tr><tr><td class='tk'>OKLO</td><td>Oklo</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$39</td><td class='nt'>Fell 5.3% on Tuesday and touched a fresh 52-week low of $37.80, giving back the pop from last week&#x27;s DOE startup authorisation for its Groves test reactor.</td></tr><tr><td class='tk'>VST</td><td>Vistra</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$148.64</td><td class='nt'>Dropped 5.4% - the steepest fall in the nuclear group - as brokers trimmed targets ahead of Aug 7 results, though Morgan Stanley nudged its target up to $212.</td></tr><tr><td class='tk'>LEU</td><td>Centrus Energy</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$164.69</td><td class='nt'>Down 2.9% after JPMorgan cut its price target to $178 from $236; Q2 earnings are due Aug 5.</td></tr></tbody></table><div class='trend'><b>Trend Watch:</b> Nvidia has now slipped for a fifth straight session, from $208.76 on Jul 24 to $192.50 today, and has closed below the $200 mark two days running. Today&#x27;s real split is chips versus everything else rather than AI versus nuclear: NVDA (-2.3%) and AMD (-5.0%) kept sliding on the China memory-chip scare, while MSFT (+0.3%), GOOGL and PLTR held flat-to-higher ahead of Microsoft&#x27;s earnings tonight. The nuclear group fell again across the board and all five names now sit below their Jul 24 levels - OKLO (~$44 to $39) and VST ($169 to $149) have each shed roughly 11-12% in five sessions. Of the ten tickers tracked, only MSFT, GOOGL and PLTR are still above where they started on Jul 24.</div></div>
+</div>
+</div></body></html>
