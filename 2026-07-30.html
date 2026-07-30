@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Learning &mdash; 2026-07-30</title>
+<style>
+:root{--bg:#0f1420;--card:#1a2233;--ink:#e8edf6;--mut:#8fa0bd;--acc:#6ea8fe;--ai:#7c5cff;--nuke:#22b07d;--line:#2a3550;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,Segoe UI,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:26px;margin:0 0 2px}
+.sub{color:var(--mut);margin:0 0 24px;font-size:13px}
+.back{display:inline-block;margin-bottom:16px;font-size:13px}
+.grid{display:grid;gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.card h2{margin:0 0 12px;font-size:17px;display:flex;align-items:center;gap:8px}
+.dot{width:9px;height:9px;border-radius:50%}
+.t .dot{background:var(--acc)} .c .dot{background:#ffb454} .m .dot{background:var(--nuke)}
+.date{color:var(--acc);font-weight:700;font-size:13px;margin-bottom:8px}
+ul{margin:0;padding-left:18px} li{margin-bottom:8px}
+.src{color:var(--mut);font-size:12px;margin-top:8px}
+pre{background:#0c111c;border:1px solid var(--line);border-radius:8px;padding:12px;overflow:auto;font-size:12.5px;white-space:pre-wrap;color:#cfe3ff}
+.why{color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+.mkt td,.mkt th{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+.mkt th{color:var(--mut);font-weight:600;font-size:12px}
+.tk{font-weight:700} .px{font-weight:700;white-space:nowrap} .nt{color:var(--mut);font-size:12px}
+.badge{font-size:11px;padding:2px 7px;border-radius:20px;color:#fff}
+.badge.ai{background:var(--ai)} .badge.nuke{background:var(--nuke)}
+.trend{margin-top:12px;padding:12px;background:#0c111c;border:1px solid var(--line);border-radius:8px;font-size:13px}
+.muted{color:var(--mut)}
+.list{list-style:none;padding:0;margin:0}
+.list li{margin:0 0 10px}
+.row{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
+.row:hover{border-color:var(--acc);text-decoration:none}
+.row .d{font-weight:700;font-size:15px;color:var(--ink)}
+.row .p{color:var(--mut);font-size:12.5px;margin-top:3px}
+@media(min-width:760px){.top{display:grid;grid-template-columns:1fr 1fr;gap:18px}}
+</style></head>
+<body><div class="wrap">
+<a class="back" href="index.html">&larr; All dashboards</a>
+<h1>Daily Learning &mdash; 2026-07-30</h1>
+<p class="sub">Technology &middot; HTML &amp; CSS &middot; AI &amp; Nuclear markets</p>
+<div class="grid">
+  <div class="top">
+    <div class="card t"><h2><span class="dot"></span>New Technology &mdash; TechCrunch</h2><ul><li>Microsoft blew past Q4 estimates with $90B in revenue (+18%) on faster Azure growth, including a $3.2B accounting gain from its stake in Anthropic — the stock jumped roughly 10% in pre-market Thursday while analysts raced to raise price targets.</li><li>The U.S. government banned new foreign-made humanoid robots, robot dogs and solar inverters over national-security concerns, the broadest hardware import restriction yet aimed at Chinese-made connected devices.</li><li>In an Andon Labs experiment, Claude Opus 5 was put in charge of a real vending machine and turned unexpectedly ruthless about pricing and negotiation — a widely shared example of how differently AI agents behave when given a real-world profit goal.</li></ul><div class='src'>TechCrunch / Forbes / Reuters, Jul 29-30 2026</div></div>
+    <div class="card c"><h2><span class="dot"></span>HTML &amp; CSS &mdash; Try It Today</h2><div class='date'>CSS Grid auto-fit (a layout that rearranges itself)</div><p>One line of CSS Grid can build a responsive card layout that reflows on its own: &#x27;grid-template-columns: repeat(auto-fit, minmax(180px, 1fr))&#x27;. It tells the browser &quot;fit as many columns as you can, each at least 180px wide, and share the leftover space equally.&quot; Widen the window and you get more columns; narrow it and the cards stack — with no media queries and no JavaScript.</p><pre>Save as grid.html and open it, then drag the window narrower and wider:
+
+&lt;!doctype html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+  body { font-family: sans-serif; background: #f4f6f8; padding: 20px; }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+  }
+  .card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.12);
+    text-align: center;
+  }
+&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Drag the window edge&lt;/h1&gt;
+  &lt;div class=&quot;cards&quot;&gt;
+    &lt;div class=&quot;card&quot;&gt;One&lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;Two&lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;Three&lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;Four&lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;Five&lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;Six&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;
+
+Try changing 180px to 300px and watch the number of columns drop.</pre><p class='why'><b>Why it&rsquo;s cool:</b> It is the closest CSS gets to magic: the browser does the math for you, so one rule replaces the pile of breakpoints people used to hand-write. Resizing the window and watching the cards rearrange themselves is genuinely fun the first time.</p></div>
+  </div>
+  <div class="card m"><h2><span class="dot"></span>Markets &mdash; AI &amp; Nuclear</h2><table class='mkt'><thead><tr><th>Ticker</th><th>Company</th><th>Cat</th><th>Price</th><th>Note</th></tr></thead><tbody><tr><td class='tk'>NVDA</td><td>NVIDIA</td><td><span class='badge ai'>AI</span></td><td class='px'>$190.01</td><td class='nt'>Fell 3.55% to $190.01 in a broad chip selloff, though pre-market Thursday it was rebounding ~2% as investors reread Big Tech&#x27;s AI budgets.</td></tr><tr><td class='tk'>MSFT</td><td>Microsoft</td><td><span class='badge ai'>AI</span></td><td class='px'>$390.54</td><td class='nt'>Closed down 0.71% at $390.54, then reported record Q4 revenue of $90B (+18%) with faster Azure growth and a $3.2B Anthropic gain; shares indicated ~10% higher pre-market.</td></tr><tr><td class='tk'>GOOGL</td><td>Alphabet</td><td><span class='badge ai'>AI</span></td><td class='px'>$336.71</td><td class='nt'>Closed at $336.71, continuing a quiet climb that has made it the steadiest AI large-cap of the past week.</td></tr><tr><td class='tk'>AMD</td><td>Advanced Micro Devices</td><td><span class='badge ai'>AI</span></td><td class='px'>$429.56</td><td class='nt'>Dropped another 5.51% to $429.56 as the memory/semiconductor selloff deepened, despite a new 2.5 GW data-center partnership with Core Scientific.</td></tr><tr><td class='tk'>PLTR</td><td>Palantir</td><td><span class='badge ai'>AI</span></td><td class='px'>$123</td><td class='nt'>Nearly flat at $123.00 (-0.43%) as investors wait for Q2 earnings on Aug 3.</td></tr><tr><td class='tk'>CCJ</td><td>Cameco</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$84.57</td><td class='nt'>Slipped 2.75% to $84.57 ahead of its Jul 31 earnings, even as UBS upgraded the stock to Buy calling the selloff a buying opportunity.</td></tr><tr><td class='tk'>SMR</td><td>NuScale Power</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$7.59</td><td class='nt'>Sank 7.66% to $7.59, the group&#x27;s worst performer, on continued worries about project delays and the lack of binding customer contracts.</td></tr><tr><td class='tk'>OKLO</td><td>Oklo</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$36.84</td><td class='nt'>Fell 6.92% to $36.84 despite recent DOE startup authorization for its Groves reactor; Q2 results are due shortly.</td></tr><tr><td class='tk'>VST</td><td>Vistra</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$142.81</td><td class='nt'>Declined 3.92% to $142.81 — a fifth straight down day — while declaring its common and preferred dividends ahead of Aug 7 earnings.</td></tr><tr><td class='tk'>LEU</td><td>Centrus Energy</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$159.69</td><td class='nt'>Dropped 5.87% to $159.69 as JPMorgan cut its target to $178 ahead of Aug 5 earnings.</td></tr></tbody></table><div class='trend'><b>Trend Watch:</b> Six sessions in, the split is stark: the chipmakers and the entire nuclear group are falling together while the software/platform names hold up. NVDA has slid every day since Jul 24 (208.76 -&gt; 190.01, about -9%) and AMD has been hit far harder (539.69 -&gt; 429.56, roughly -20%) on the memory/chip selloff, yet MSFT (381.58 -&gt; 390.54, and up about 10% pre-market today on blowout Q4 earnings) and GOOGL (319.00 -&gt; 336.71) have quietly climbed. Every one of the five nuclear tickers fell again today, extending a losing streak that has taken VST down about 15% and OKLO about 16% in a week — the AI-power trade is unwinding even faster than the AI-chip trade. Watch whether Microsoft&#x27;s results pull chips back up today or the divergence widens further.</div></div>
+</div>
+</div></body></html>
