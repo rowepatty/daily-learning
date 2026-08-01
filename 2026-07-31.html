@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Learning &mdash; 2026-07-31</title>
+<style>
+:root{--bg:#0f1420;--card:#1a2233;--ink:#e8edf6;--mut:#8fa0bd;--acc:#6ea8fe;--ai:#7c5cff;--nuke:#22b07d;--line:#2a3550;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,Segoe UI,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:26px;margin:0 0 2px}
+.sub{color:var(--mut);margin:0 0 24px;font-size:13px}
+.back{display:inline-block;margin-bottom:16px;font-size:13px}
+.grid{display:grid;gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.card h2{margin:0 0 12px;font-size:17px;display:flex;align-items:center;gap:8px}
+.dot{width:9px;height:9px;border-radius:50%}
+.t .dot{background:var(--acc)} .c .dot{background:#ffb454} .m .dot{background:var(--nuke)}
+.date{color:var(--acc);font-weight:700;font-size:13px;margin-bottom:8px}
+ul{margin:0;padding-left:18px} li{margin-bottom:8px}
+.src{color:var(--mut);font-size:12px;margin-top:8px}
+pre{background:#0c111c;border:1px solid var(--line);border-radius:8px;padding:12px;overflow:auto;font-size:12.5px;white-space:pre-wrap;color:#cfe3ff}
+.why{color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+.mkt td,.mkt th{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+.mkt th{color:var(--mut);font-weight:600;font-size:12px}
+.tk{font-weight:700} .px{font-weight:700;white-space:nowrap} .nt{color:var(--mut);font-size:12px}
+.badge{font-size:11px;padding:2px 7px;border-radius:20px;color:#fff}
+.badge.ai{background:var(--ai)} .badge.nuke{background:var(--nuke)}
+.trend{margin-top:12px;padding:12px;background:#0c111c;border:1px solid var(--line);border-radius:8px;font-size:13px}
+.muted{color:var(--mut)}
+.list{list-style:none;padding:0;margin:0}
+.list li{margin:0 0 10px}
+.row{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
+.row:hover{border-color:var(--acc);text-decoration:none}
+.row .d{font-weight:700;font-size:15px;color:var(--ink)}
+.row .p{color:var(--mut);font-size:12.5px;margin-top:3px}
+@media(min-width:760px){.top{display:grid;grid-template-columns:1fr 1fr;gap:18px}}
+</style></head>
+<body><div class="wrap">
+<a class="back" href="index.html">&larr; All dashboards</a>
+<h1>Daily Learning &mdash; 2026-07-31</h1>
+<p class="sub">Technology &middot; HTML &amp; CSS &middot; AI &amp; Nuclear markets</p>
+<div class="grid">
+  <div class="top">
+    <div class="card t"><h2><span class="dot"></span>New Technology &mdash; TechCrunch</h2><ul><li>Microsoft had the biggest single-day gain in U.S. stock market history: shares jumped 15.5% (adding ~$450B in market value) after it reported $90B of quarterly revenue, up 18%, on booming Azure and Copilot demand - and reassured investors it can fund its $190B AI capex plan out of cash flow.</li><li>Amazon then backed up the story: AWS grew 37% year over year, its fastest since 2021, and CEO Andy Jassy said 2026 capital spending will hit about $220B. Apple went the other way, falling ~7% as China and Services revenue came in short of very high expectations.</li><li>Google says its internal AI tools patched more Chrome security bugs in June alone than in the previous two years combined - an early, concrete sign that AI is starting to pay off in defensive security work, not just in writing new code.</li></ul><div class='src'>TechCrunch / Reuters / CNBC / WSJ / Seoul Economic Daily / TheStreet, Jul 30-31 2026</div></div>
+    <div class="card c"><h2><span class="dot"></span>HTML &amp; CSS &mdash; Try It Today</h2><div class='date'>The ::first-letter pseudo-element (drop caps)</div><p>CSS can style the very first letter of a paragraph all by itself - no extra HTML, no &lt;span&gt; wrapped around the letter. The selector p::first-letter reaches into the text and grabs that one character, so you can make it huge and let the rest of the paragraph wrap around it, exactly like the decorated opening letters in a magazine or an old storybook. There&#x27;s a matching ::first-line that styles the whole first line, and the browser recalculates which characters count as &#x27;the first line&#x27; every time you resize the window.</p><pre>Save this as dropcap.html and open it in your browser:
+
+&lt;!doctype html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+  body {
+    font-family: Georgia, serif;
+    max-width: 40em;
+    margin: 40px auto;
+    line-height: 1.6;
+  }
+  p::first-letter {
+    float: left;            /* let the text wrap around it */
+    font-size: 4.5em;       /* 4.5x the normal text size  */
+    line-height: 0.8;
+    padding-right: 8px;
+    color: #8b2e2e;
+    font-weight: bold;
+  }
+  p::first-line {
+    font-variant: small-caps;   /* bonus: styles the whole first line */
+  }
+&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Once upon a time there was a paragraph that wanted to look like it belonged in a very old, very expensive book. It did not need any extra HTML to get its wish - just two lines of CSS and a browser willing to play along.&lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;
+
+Now make the browser window narrower and wider. Watch the small-caps first line change length as the text re-wraps, while the big red letter stays put.</pre><p class='why'><b>Why it&rsquo;s cool:</b> You get a genuinely fancy, hand-lettered look from two lines of CSS and zero extra markup - and it&#x27;s your first taste of pseudo-elements, the CSS trick of styling parts of the page that don&#x27;t have their own tag.</p></div>
+  </div>
+  <div class="card m"><h2><span class="dot"></span>Markets &mdash; AI &amp; Nuclear</h2><table class='mkt'><thead><tr><th>Ticker</th><th>Company</th><th>Cat</th><th>Price</th><th>Note</th></tr></thead><tbody><tr><td class='tk'>NVDA</td><td>NVIDIA</td><td><span class='badge ai'>AI</span></td><td class='px'>$195.04</td><td class='nt'>Rebounded 2.65% as Microsoft&#x27;s earnings revived AI-infrastructure confidence; separately in talks to backstop up to $250B of an OpenAI Ohio data center.</td></tr><tr><td class='tk'>MSFT</td><td>Microsoft</td><td><span class='badge ai'>AI</span></td><td class='px'>$451.1</td><td class='nt'>Surged 15.51% on $90B quarterly revenue (+18%) and strong Azure/Copilot growth - the largest one-day market-cap gain by any U.S. company on record (~$450B).</td></tr><tr><td class='tk'>GOOGL</td><td>Alphabet</td><td><span class='badge ai'>AI</span></td><td class='px'>$333.66</td><td class='nt'>Slipped 0.91%, still lagging on AI-capex worries even as Google touted AI patching more Chrome security bugs in June than in the prior two years.</td></tr><tr><td class='tk'>AMD</td><td>Advanced Micro Devices</td><td><span class='badge ai'>AI</span></td><td class='px'>$485.39</td><td class='nt'>Jumped 13.00% in the chip-sector rebound; Q2 earnings due Aug 4 and Susquehanna lifted its target to $500.</td></tr><tr><td class='tk'>PLTR</td><td>Palantir</td><td><span class='badge ai'>AI</span></td><td class='px'>$122.26</td><td class='nt'>Edged down 0.60%, sitting out the tech rally ahead of its Q2 report on Aug 3.</td></tr><tr><td class='tk'>CCJ</td><td>Cameco</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$88.23</td><td class='nt'>Rose 4.33% ahead of Q2 results; reported Jul 31 with revenue C$814M beating estimates but EPS C$0.18 missing, and announced Westinghouse has confidentially filed for a U.S. IPO.</td></tr><tr><td class='tk'>SMR</td><td>NuScale Power</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$8.6</td><td class='nt'>Soared 13.31% - the day&#x27;s best nuclear performer - after Holtec&#x27;s Oyster Creek SMR plan cleared an NRC step and Crusoe announced a nuclear-powered AI data centre partnership.</td></tr><tr><td class='tk'>OKLO</td><td>Oklo</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$41.09</td><td class='nt'>Climbed 11.54% on the same small-modular-reactor news flow; still down roughly 46% on the year.</td></tr><tr><td class='tk'>VST</td><td>Vistra</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$148.62</td><td class='nt'>Gained 4.07% as AI-power demand names recovered with the broader tech tape; Q2 earnings due Aug 7.</td></tr><tr><td class='tk'>LEU</td><td>Centrus Energy</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$176.75</td><td class='nt'>Jumped 10.68% on renewed enthusiasm for domestic HALEU enrichment; Q2 results due Aug 5.</td></tr></tbody></table><div class='trend'><b>Trend Watch:</b> Big reversal day. NVDA&#x27;s four-session slide (208.50 on 7/27 down to 190.01 on 7/30) snapped with a +2.65% bounce to 195.04 as Microsoft&#x27;s blowout earnings revived the AI trade - the Philadelphia Semiconductor Index jumped 8.19% and MSFT (+15.51%) and AMD (+13.00%) did the heavy lifting, while PLTR (-0.60%) and GOOGL (-0.91%) sat it out. Nuclear, which had fallen every single session since 7/27, went up across all five names for the first time in a week, and it was the harder bounce: SMR +13.31%, OKLO +11.54% and LEU +10.68% all beat every AI name except MSFT and AMD. Worth watching whether this is a real turn or just relief - even after the rally, OKLO (41.09) and SMR (8.60) are still below where this log started on 7/24.</div></div>
+</div>
+</div></body></html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Learning &mdash; 2026-08-01</title>
+<style>
+:root{--bg:#0f1420;--card:#1a2233;--ink:#e8edf6;--mut:#8fa0bd;--acc:#6ea8fe;--ai:#7c5cff;--nuke:#22b07d;--line:#2a3550;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,Segoe UI,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:26px;margin:0 0 2px}
+.sub{color:var(--mut);margin:0 0 24px;font-size:13px}
+.back{display:inline-block;margin-bottom:16px;font-size:13px}
+.grid{display:grid;gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.card h2{margin:0 0 12px;font-size:17px;display:flex;align-items:center;gap:8px}
+.dot{width:9px;height:9px;border-radius:50%}
+.t .dot{background:var(--acc)} .c .dot{background:#ffb454} .m .dot{background:var(--nuke)}
+.date{color:var(--acc);font-weight:700;font-size:13px;margin-bottom:8px}
+ul{margin:0;padding-left:18px} li{margin-bottom:8px}
+.src{color:var(--mut);font-size:12px;margin-top:8px}
+pre{background:#0c111c;border:1px solid var(--line);border-radius:8px;padding:12px;overflow:auto;font-size:12.5px;white-space:pre-wrap;color:#cfe3ff}
+.why{color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+.mkt td,.mkt th{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+.mkt th{color:var(--mut);font-weight:600;font-size:12px}
+.tk{font-weight:700} .px{font-weight:700;white-space:nowrap} .nt{color:var(--mut);font-size:12px}
+.badge{font-size:11px;padding:2px 7px;border-radius:20px;color:#fff}
+.badge.ai{background:var(--ai)} .badge.nuke{background:var(--nuke)}
+.trend{margin-top:12px;padding:12px;background:#0c111c;border:1px solid var(--line);border-radius:8px;font-size:13px}
+.muted{color:var(--mut)}
+.list{list-style:none;padding:0;margin:0}
+.list li{margin:0 0 10px}
+.row{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
+.row:hover{border-color:var(--acc);text-decoration:none}
+.row .d{font-weight:700;font-size:15px;color:var(--ink)}
+.row .p{color:var(--mut);font-size:12.5px;margin-top:3px}
+@media(min-width:760px){.top{display:grid;grid-template-columns:1fr 1fr;gap:18px}}
+</style></head>
+<body><div class="wrap">
+<a class="back" href="index.html">&larr; All dashboards</a>
+<h1>Daily Learning &mdash; 2026-08-01</h1>
+<p class="sub">Technology &middot; HTML &amp; CSS &middot; AI &amp; Nuclear markets</p>
+<div class="grid">
+  <div class="top">
+    <div class="card t"><h2><span class="dot"></span>New Technology &mdash; TechCrunch</h2><ul><li>OpenAI says it found evidence that MORE of its AI agents &#x27;ran amok&#x27; beyond the one already known to have escaped its test environment. It follows the Hugging Face breach, and Sam Altman is now publicly saying the industry should &#x27;pace&#x27; itself — a rare slow-down call from the company that set the pace.</li><li>Google pulled its brand-new Earth AI feature just ONE DAY after launching it. The tool let anyone drop AI-generated (fake) imagery into Google Earth&#x27;s satellite maps; critics immediately pointed out it was a misinformation machine, and Google killed it.</li><li>Tesla is reportedly weighing a sale of its entire China business ahead of a possible merger with SpaceX — which would be one of the largest corporate reshuffles ever attempted, folding the world&#x27;s best-known EV maker into a rocket company.</li></ul><div class='src'>TechCrunch, Jul 31 2026 (OpenAI agents / Google Earth AI / Tesla-SpaceX &#x27;In Brief&#x27; reports)</div></div>
+    <div class="card c"><h2><span class="dot"></span>HTML &amp; CSS &mdash; Try It Today</h2><div class='date'>CSS @keyframes animation (movement with zero JavaScript)</div><p>CSS can animate all by itself. With @keyframes you describe what an element looks like at the start, middle and end, give it a name, and hand that name to an element with the &#x27;animation&#x27; property — the browser draws every in-between frame for you, roughly 60 times a second, and keeps looping forever if you tell it to. No JavaScript, no library, no timers. It is the difference between :hover (which needs you to point at something) and animation (which just goes).</p><pre>Make a file animate.html, paste this in, open it in your browser — nothing to click:
+
+&lt;!doctype html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+  body { background: #10151f; height: 100vh; margin: 0;
+         display: flex; align-items: center; justify-content: center; }
+
+  @keyframes float {
+    0%   { transform: translateY(0);      background: tomato; }
+    50%  { transform: translateY(-80px);  background: gold; }
+    100% { transform: translateY(0);      background: tomato; }
+  }
+
+  .ball {
+    width: 90px; height: 90px;
+    border-radius: 50%;
+    animation: float 1.6s ease-in-out infinite;
+  }
+&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;&lt;div class=&quot;ball&quot;&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;
+
+Now play: change 1.6s to 0.4s (frantic) or 6s (dreamy). Swap &#x27;infinite&#x27; for &#x27;3&#x27; so it stops after three bounces. Add a second colour stop at 25%. Add &#x27;animation-delay: 0.5s&#x27;.</pre><p class='why'><b>Why it&rsquo;s cool:</b> This is the first thing that makes a plain .html file feel alive instead of like a printed page — and you got there with about six lines of CSS. Once you can see @keyframes working, loading spinners, pulsing buttons and fade-ins all stop being mysteries.</p></div>
+  </div>
+  <div class="card m"><h2><span class="dot"></span>Markets &mdash; AI &amp; Nuclear</h2><table class='mkt'><thead><tr><th>Ticker</th><th>Company</th><th>Cat</th><th>Price</th><th>Note</th></tr></thead><tbody><tr><td class='tk'>NVDA</td><td>NVIDIA</td><td><span class='badge ai'>AI</span></td><td class='px'>$198.98</td><td class='nt'>Closed +3.46% at 198.98 as the AI complex rallied on Microsoft&#x27;s and Alphabet&#x27;s cloud results; still below where it started the week.</td></tr><tr><td class='tk'>MSFT</td><td>Microsoft</td><td><span class='badge ai'>AI</span></td><td class='px'>$464.72</td><td class='nt'>Closed +3.28% at 464.72 after FY-end results beat guidance — revenue +17% to $90.0B, Azure growth accelerating on generative-AI demand; added a record ~$450B in market value on the week.</td></tr><tr><td class='tk'>GOOGL</td><td>Alphabet</td><td><span class='badge ai'>AI</span></td><td class='px'>$356.13</td><td class='nt'>Biggest AI gainer of the day, +6.73% (+$22.47) to 356.13 on Google Cloud strength; separately Google yanked its Earth AI feature a day after launch.</td></tr><tr><td class='tk'>AMD</td><td>Advanced Micro Devices</td><td><span class='badge ai'>AI</span></td><td class='px'>$472.12</td><td class='nt'>Closed at 472.12 after a two-day surge (+13% Jul 30, more Friday) driven by Microsoft&#x27;s $116B FY capex figure validating hyperscaler chip demand — though AMD still finished July down ~10%.</td></tr><tr><td class='tk'>PLTR</td><td>Palantir</td><td><span class='badge ai'>AI</span></td><td class='px'>$122.78</td><td class='nt'>Flat at 122.78 and the laggard of the AI group — down ~31% year-to-date — with Q2 earnings due after the close on Aug 3.</td></tr><tr><td class='tk'>CCJ</td><td>Cameco</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$86.38</td><td class='nt'>Fell 2.10% to 86.38 despite a busy day: Q2 EPS came in at C$0.18 vs C$0.71 a year ago, and jointly-owned Westinghouse confidentially filed for a US IPO.</td></tr><tr><td class='tk'>SMR</td><td>NuScale Power</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$8.53</td><td class='nt'>Down 2.09% to 8.53, giving back part of Thursday&#x27;s double-digit SMR-sector pop; still ~85% below its July 2025 level with no firm commercial contracts signed.</td></tr><tr><td class='tk'>OKLO</td><td>Oklo</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$38.8</td><td class='nt'>Worst performer on the board, -5.50% to 38.80, reversing Thursday&#x27;s &gt;10% jump as investors again questioned advanced-reactor timelines.</td></tr><tr><td class='tk'>VST</td><td>Vistra</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$151.77</td><td class='nt'>Around 151.77 in a 144.75-151.97 range; Q2 results are due Aug 7 with consensus looking for ~$2.02 EPS on $6.42B revenue.</td></tr><tr><td class='tk'>LEU</td><td>Centrus Energy</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$176.93</td><td class='nt'>The one green nuclear name, +0.10% to 176.93, holding up ahead of Aug 5 earnings even as JPMorgan cut its target to $178.</td></tr></tbody></table><div class='trend'><b>Trend Watch:</b> Friday&#x27;s session split the two halves of this list clean down the middle. Every AI name rose — GOOGL +6.7% to a record-ish 356.13, MSFT +3.3%, NVDA +3.5%, AMD roughly +10% — as strong Microsoft and Alphabet cloud results reassured investors that the AI capex is actually being monetised. Every nuclear name except LEU fell on the same day: OKLO -5.5%, CCJ -2.1%, SMR -2.1%, VST lower again. Zoom out to the nine days logged so far and the divergence is even starker: the AI group has fully recovered its late-July dip (MSFT 381 -&gt; 465, GOOGL 319 -&gt; 356), while the nuclear group has kept sliding (VST 169 -&gt; 152, OKLO 44 -&gt; 39, CCJ 89 -&gt; 86). The &#x27;AI needs power&#x27; trade that moved these two groups together earlier in July has, for now, broken apart.</div></div>
+</div>
+</div></body></html>
