@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Learning &mdash; 2026-08-02</title>
+<style>
+:root{--bg:#0f1420;--card:#1a2233;--ink:#e8edf6;--mut:#8fa0bd;--acc:#6ea8fe;--ai:#7c5cff;--nuke:#22b07d;--line:#2a3550;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,Segoe UI,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:26px;margin:0 0 2px}
+.sub{color:var(--mut);margin:0 0 24px;font-size:13px}
+.back{display:inline-block;margin-bottom:16px;font-size:13px}
+.grid{display:grid;gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.card h2{margin:0 0 12px;font-size:17px;display:flex;align-items:center;gap:8px}
+.dot{width:9px;height:9px;border-radius:50%}
+.t .dot{background:var(--acc)} .c .dot{background:#ffb454} .m .dot{background:var(--nuke)}
+.date{color:var(--acc);font-weight:700;font-size:13px;margin-bottom:8px}
+ul{margin:0;padding-left:18px} li{margin-bottom:8px}
+.src{color:var(--mut);font-size:12px;margin-top:8px}
+pre{background:#0c111c;border:1px solid var(--line);border-radius:8px;padding:12px;overflow:auto;font-size:12.5px;white-space:pre-wrap;color:#cfe3ff}
+.why{color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+.mkt td,.mkt th{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+.mkt th{color:var(--mut);font-weight:600;font-size:12px}
+.tk{font-weight:700} .px{font-weight:700;white-space:nowrap} .nt{color:var(--mut);font-size:12px}
+.badge{font-size:11px;padding:2px 7px;border-radius:20px;color:#fff}
+.badge.ai{background:var(--ai)} .badge.nuke{background:var(--nuke)}
+.trend{margin-top:12px;padding:12px;background:#0c111c;border:1px solid var(--line);border-radius:8px;font-size:13px}
+.muted{color:var(--mut)}
+.list{list-style:none;padding:0;margin:0}
+.list li{margin:0 0 10px}
+.row{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
+.row:hover{border-color:var(--acc);text-decoration:none}
+.row .d{font-weight:700;font-size:15px;color:var(--ink)}
+.row .p{color:var(--mut);font-size:12.5px;margin-top:3px}
+@media(min-width:760px){.top{display:grid;grid-template-columns:1fr 1fr;gap:18px}}
+</style></head>
+<body><div class="wrap">
+<a class="back" href="index.html">&larr; All dashboards</a>
+<h1>Daily Learning &mdash; 2026-08-02</h1>
+<p class="sub">Technology &middot; HTML &amp; CSS &middot; AI &amp; Nuclear markets</p>
+<div class="grid">
+  <div class="top">
+    <div class="card t"><h2><span class="dot"></span>New Technology &mdash; TechCrunch</h2><ul><li>California&#x27;s AI Transparency Act (SB 942, as amended by AB 853) became operative today, Aug 2. Any generative-AI provider with more than 1 million monthly California users must now embed hidden provenance data in the media it generates, show a visible AI label, and offer a free public detection tool -- and stripping that provenance out is itself illegal.</li><li>Qualcomm told phone makers it is raising Snapdragon chip prices by double digits for anything shipped after Sept 1, blaming higher costs across wafer fabrication, packaging, testing and memory. Because Qualcomm dominates Android processors, buyers have little room to push back, so expect pricier phones in late 2026 and 2027.</li><li>LinkedIn added a &#x27;Seems like AI slop&#x27; button under each post&#x27;s three-dot menu, after research suggested roughly 41% of long-form posts on the platform are AI-written. Flagged posts get hidden from your feed and see reduced reach; LinkedIn is also retiring its own AI &#x27;enhance your post&#x27; writing tool in favour of a proofreader that leaves your voice alone.</li></ul><div class='src'>TechCrunch / Bloomberg / National Law Review / Forbes, Jul 24 - Aug 2 2026</div></div>
+    <div class="card c"><h2><span class="dot"></span>HTML &amp; CSS &mdash; Try It Today</h2><div class='date'>The ::selection pseudo-element (restyle the highlight colour)</div><p>When you drag your mouse across text, the browser paints a highlight -- usually blue. That highlight is a thing you can style. The ::selection pseudo-element lets you set your own background and text colour for whatever the visitor has selected, in two lines of CSS and zero JavaScript. It&#x27;s one of the very few ways plain CSS reacts to something the user is doing right now.</p><pre>Save this as select.html, open it, then drag your mouse across the paragraph:
+
+&lt;!doctype html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+  body {
+    font-family: Georgia, serif;
+    max-width: 34em;
+    margin: 60px auto;
+    line-height: 1.7;
+  }
+
+  /* the whole page&#x27;s highlight colour */
+  ::selection {
+    background: #ffd166;   /* highlighter yellow */
+    color: #1a1a1a;
+  }
+
+  /* one element can override it */
+  .spooky::selection {
+    background: #2b2d42;
+    color: #ff006e;
+  }
+&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Highlight me&lt;/h1&gt;
+  &lt;p&gt;Drag your mouse across this sentence and you&#x27;ll get a
+     yellow highlighter instead of the usual blue.&lt;/p&gt;
+  &lt;p class=&quot;spooky&quot;&gt;Now drag across THIS sentence. Different
+     element, different rules.&lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;
+
+Try swapping #ffd166 for &#x27;limegreen&#x27;, or set background to &#x27;transparent&#x27; and watch the highlight vanish while the text stays selectable.</pre><p class='why'><b>Why it&rsquo;s cool:</b> It&#x27;s a tiny detail that makes a page feel hand-made -- and it&#x27;s a first taste of a big CSS idea: pseudo-elements let you style parts of the page that aren&#x27;t real HTML tags you wrote.</p></div>
+  </div>
+  <div class="card m"><h2><span class="dot"></span>Markets &mdash; AI &amp; Nuclear</h2><table class='mkt'><thead><tr><th>Ticker</th><th>Company</th><th>Cat</th><th>Price</th><th>Note</th></tr></thead><tbody><tr><td class='tk'>NVDA</td><td>NVIDIA</td><td><span class='badge ai'>AI</span></td><td class='px'>$198.98</td><td class='nt'>Rose ~3.5% Friday in a broad chip rally (SOX +8.2%) on AI-capex optimism; third straight up day off its Jul 30 low.</td></tr><tr><td class='tk'>MSFT</td><td>Microsoft</td><td><span class='badge ai'>AI</span></td><td class='px'>$464.72</td><td class='nt'>Still riding its Jul 31 earnings blowout, which added ~15% in a single session and dragged the whole AI complex higher.</td></tr><tr><td class='tk'>GOOGL</td><td>Alphabet</td><td><span class='badge ai'>AI</span></td><td class='px'>$356.13</td><td class='nt'>Gained ~7% Friday, its best day of the stretch, fully erasing the late-July capex-guidance selloff.</td></tr><tr><td class='tk'>AMD</td><td>Advanced Micro Devices</td><td><span class='badge ai'>AI</span></td><td class='px'>$472.12</td><td class='nt'>Rebounded from its Jul 30 low but still the weakest AI name of the past week; Q2 earnings due this week.</td></tr><tr><td class='tk'>PLTR</td><td>Palantir</td><td><span class='badge ai'>AI</span></td><td class='px'>$122.78</td><td class='nt'>Essentially flat all week ahead of Q2 earnings on Aug 3, where analysts look for ~81% revenue growth to about $1.81B.</td></tr><tr><td class='tk'>CCJ</td><td>Cameco</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$86.38</td><td class='nt'>Drifting lower on known overhangs: an extended Q3 maintenance shutdown at the Key Lake mill, a $559M CRA tax dispute, and Kazakhstan&#x27;s new extraction tax.</td></tr><tr><td class='tk'>SMR</td><td>NuScale Power</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$8.53</td><td class='nt'>Holding a key support level after its Jul 30 double-digit pop; analysts remain cautious pending real deployment milestones.</td></tr><tr><td class='tk'>OKLO</td><td>Oklo</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$38.8</td><td class='nt'>Gave back part of the Jul 30-31 SMR-sector rally; the Centrus HALEU fuel letter of intent for its Ohio campus remains the core long-term story.</td></tr><tr><td class='tk'>VST</td><td>Vistra</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$151.77</td><td class='nt'>Recovering off its Jul 30 low into Q2 earnings scheduled for Aug 7.</td></tr><tr><td class='tk'>LEU</td><td>Centrus Energy</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$176.93</td><td class='nt'>The only nuclear name higher than it was on Jul 24, buoyed by its role supplying domestic HALEU to Oklo.</td></tr></tbody></table><div class='trend'><b>Trend Watch:</b> Nine days in, a clean split has opened up inside the AI group: the software/hyperscaler names have run away from the chipmakers. MSFT is up roughly 22% since Jul 24 (including a +15% single-day jump on Jul 31) and GOOGL is up about 12%, while NVDA is down ~5% and AMD down ~12% over the same stretch despite both bouncing off their Jul 30 lows for three straight sessions. Nuclear has been the weaker book overall -- four of the five names are lower than Jul 24, with OKLO (-12%) and VST (-10%) the worst and LEU the lone gainer (+4%) -- and the sharp Jul 30-31 nuclear pop already gave back ground on Aug 1. Note prices are unchanged from Friday&#x27;s close: markets were shut over the weekend.</div></div>
+</div>
+</div></body></html>
