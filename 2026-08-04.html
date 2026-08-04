@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Learning &mdash; 2026-08-04</title>
+<style>
+:root{--bg:#0f1420;--card:#1a2233;--ink:#e8edf6;--mut:#8fa0bd;--acc:#6ea8fe;--ai:#7c5cff;--nuke:#22b07d;--line:#2a3550;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,Segoe UI,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:26px;margin:0 0 2px}
+.sub{color:var(--mut);margin:0 0 24px;font-size:13px}
+.back{display:inline-block;margin-bottom:16px;font-size:13px}
+.grid{display:grid;gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.card h2{margin:0 0 12px;font-size:17px;display:flex;align-items:center;gap:8px}
+.dot{width:9px;height:9px;border-radius:50%}
+.t .dot{background:var(--acc)} .c .dot{background:#ffb454} .m .dot{background:var(--nuke)}
+.date{color:var(--acc);font-weight:700;font-size:13px;margin-bottom:8px}
+ul{margin:0;padding-left:18px} li{margin-bottom:8px}
+.src{color:var(--mut);font-size:12px;margin-top:8px}
+pre{background:#0c111c;border:1px solid var(--line);border-radius:8px;padding:12px;overflow:auto;font-size:12.5px;white-space:pre-wrap;color:#cfe3ff}
+.why{color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+.mkt td,.mkt th{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+.mkt th{color:var(--mut);font-weight:600;font-size:12px}
+.tk{font-weight:700} .px{font-weight:700;white-space:nowrap} .nt{color:var(--mut);font-size:12px}
+.badge{font-size:11px;padding:2px 7px;border-radius:20px;color:#fff}
+.badge.ai{background:var(--ai)} .badge.nuke{background:var(--nuke)}
+.trend{margin-top:12px;padding:12px;background:#0c111c;border:1px solid var(--line);border-radius:8px;font-size:13px}
+.muted{color:var(--mut)}
+.list{list-style:none;padding:0;margin:0}
+.list li{margin:0 0 10px}
+.row{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
+.row:hover{border-color:var(--acc);text-decoration:none}
+.row .d{font-weight:700;font-size:15px;color:var(--ink)}
+.row .p{color:var(--mut);font-size:12.5px;margin-top:3px}
+@media(min-width:760px){.top{display:grid;grid-template-columns:1fr 1fr;gap:18px}}
+</style></head>
+<body><div class="wrap">
+<a class="back" href="index.html">&larr; All dashboards</a>
+<h1>Daily Learning &mdash; 2026-08-04</h1>
+<p class="sub">Technology &middot; HTML &amp; CSS &middot; AI &amp; Nuclear markets</p>
+<div class="grid">
+  <div class="top">
+    <div class="card t"><h2><span class="dot"></span>New Technology &mdash; TechCrunch</h2><ul><li>Italy&#x27;s Bending Spoons agreed to buy Airtable for $1.28 billion, adding the no-code database platform to a portfolio that already includes Evernote, Meetup and WeTransfer. It&#x27;s another sign that once-hot SaaS unicorns are now being bought outright rather than IPO&#x27;ing.</li><li>Palantir posted a blowout Q2 - revenue up 93% year-over-year to $1.94B, with US commercial revenue up 149% - and raised full-year guidance to about $8.15B. On the call CEO Alex Karp went off-script and called the wider AI industry &#x27;Marxist&#x27;; the stock jumped roughly 15%.</li><li>Sequoia&#x27;s Shaun Maguire led a $1 billion round for nuclear startup Valar Atomics, one of the largest private raises yet for an advanced-reactor company. Money keeps flowing into nuclear because AI data centres need enormous, always-on power.</li></ul><div class='src'>TechCrunch, Aug 3-4 2026 (Bending Spoons/Airtable; Palantir &amp; Karp; Valar Atomics); CNBC Palantir Q2 2026</div></div>
+    <div class="card c"><h2><span class="dot"></span>HTML &amp; CSS &mdash; Try It Today</h2><div class='date'>clip-path (cutting shapes out of plain boxes)</div><p>Every element in HTML is a rectangle - but the CSS property clip-path lets you cut that rectangle into any shape you like using a list of x/y percentage points. One line turns a square div into a hexagon, a triangle, or a ten-pointed star, with no images and no JavaScript.</p><pre>Save this as shapes.html and open it in your browser:
+
+&lt;!doctype html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+  body { background: #111; display: flex; gap: 24px; padding: 40px; }
+  .shape {
+    width: 150px; height: 150px;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+  }
+  .hexagon  { clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); }
+  .triangle { clip-path: polygon(50% 0%, 100% 100%, 0% 100%); }
+  .star     { clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%,
+                                 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&quot;shape hexagon&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;shape triangle&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;shape star&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;
+
+Every div is still a plain square - clip-path just hides the parts outside the shape. Try changing the percentages and refresh to invent your own shape.</pre><p class='why'><b>Why it&rsquo;s cool:</b> It breaks the biggest mental rule beginners learn (&#x27;everything on a web page is a box&#x27;) using a single property, and the percentage coordinates make it feel like drawing on graph paper.</p></div>
+  </div>
+  <div class="card m"><h2><span class="dot"></span>Markets &mdash; AI &amp; Nuclear</h2><table class='mkt'><thead><tr><th>Ticker</th><th>Company</th><th>Cat</th><th>Price</th><th>Note</th></tr></thead><tbody><tr><td class='tk'>NVDA</td><td>NVIDIA</td><td><span class='badge ai'>AI</span></td><td class='px'>$206.64</td><td class='nt'>Reclaimed the $210 area intraday as AI demand offsets worries about its $250B AI-infrastructure financing exposure; Q2 FY27 results due Aug 26.</td></tr><tr><td class='tk'>MSFT</td><td>Microsoft</td><td><span class='badge ai'>AI</span></td><td class='px'>$479.2</td><td class='nt'>Pulled back after a roughly 25% three-day rally, trading in a wide $471-$492 range.</td></tr><tr><td class='tk'>GOOGL</td><td>Alphabet</td><td><span class='badge ai'>AI</span></td><td class='px'>$375.88</td><td class='nt'>Up about 0.6% and near the top of its range; shares are up roughly 91% over the past 12 months.</td></tr><tr><td class='tk'>AMD</td><td>Advanced Micro Devices</td><td><span class='badge ai'>AI</span></td><td class='px'>$508.75</td><td class='nt'>Rallied back above $500 ahead of its Q2 report today, helped by price-target hikes tied to an Anthropic megadeal.</td></tr><tr><td class='tk'>PLTR</td><td>Palantir</td><td><span class='badge ai'>AI</span></td><td class='px'>$145.13</td><td class='nt'>Surged roughly 15% after Q2 revenue rose 93% to $1.94B and full-year guidance was lifted to about $8.15B.</td></tr><tr><td class='tk'>CCJ</td><td>Cameco</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$93.86</td><td class='nt'>Jumped about 4.6% on renewed uranium optimism, even as Barclays trimmed its target to $97 after the new AP1000 project news.</td></tr><tr><td class='tk'>SMR</td><td>NuScale Power</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$9.48</td><td class='nt'>Up about 5.2% to a two-week high ahead of its Q2 results tomorrow (Aug 5).</td></tr><tr><td class='tk'>OKLO</td><td>Oklo</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$42.9</td><td class='nt'>Gained about 4.1% ahead of Aug 7 earnings, following DOE startup authorisation for its Groves isotope test reactor.</td></tr><tr><td class='tk'>VST</td><td>Vistra</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$158.43</td><td class='nt'>Roughly flat after a strong prior session; Q2 results and a KeyBanc call are both set for Aug 7.</td></tr><tr><td class='tk'>LEU</td><td>Centrus Energy</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$187</td><td class='nt'>Up about 1.2% to a fresh multi-week high ahead of Aug 5 earnings and its Aug 6 conference call.</td></tr></tbody></table><div class='trend'><b>Trend Watch:</b> Nine of the ten names are higher today; only MSFT slipped (488.25 -&gt; 479.20) after a huge three-day run off its Jul 30 level of 390.54. NVDA has now risen five sessions in a row from its Jul 30 low of 190.01 to 206.64, about +8.8%. The nuclear basket had its strongest single day in two weeks - CCJ +4.6%, SMR +5.2%, OKLO +4.1% - decisively reversing the late-July slide and, for once, out-gaining the AI group. PLTR&#x27;s roughly +15% jump on blowout Q2 results is the biggest one-day move recorded in this sheet so far.</div></div>
+</div>
+</div></body></html>

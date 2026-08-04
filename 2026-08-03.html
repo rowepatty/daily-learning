@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Learning &mdash; 2026-08-03</title>
+<style>
+:root{--bg:#0f1420;--card:#1a2233;--ink:#e8edf6;--mut:#8fa0bd;--acc:#6ea8fe;--ai:#7c5cff;--nuke:#22b07d;--line:#2a3550;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,Segoe UI,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:26px;margin:0 0 2px}
+.sub{color:var(--mut);margin:0 0 24px;font-size:13px}
+.back{display:inline-block;margin-bottom:16px;font-size:13px}
+.grid{display:grid;gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.card h2{margin:0 0 12px;font-size:17px;display:flex;align-items:center;gap:8px}
+.dot{width:9px;height:9px;border-radius:50%}
+.t .dot{background:var(--acc)} .c .dot{background:#ffb454} .m .dot{background:var(--nuke)}
+.date{color:var(--acc);font-weight:700;font-size:13px;margin-bottom:8px}
+ul{margin:0;padding-left:18px} li{margin-bottom:8px}
+.src{color:var(--mut);font-size:12px;margin-top:8px}
+pre{background:#0c111c;border:1px solid var(--line);border-radius:8px;padding:12px;overflow:auto;font-size:12.5px;white-space:pre-wrap;color:#cfe3ff}
+.why{color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+.mkt td,.mkt th{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+.mkt th{color:var(--mut);font-weight:600;font-size:12px}
+.tk{font-weight:700} .px{font-weight:700;white-space:nowrap} .nt{color:var(--mut);font-size:12px}
+.badge{font-size:11px;padding:2px 7px;border-radius:20px;color:#fff}
+.badge.ai{background:var(--ai)} .badge.nuke{background:var(--nuke)}
+.trend{margin-top:12px;padding:12px;background:#0c111c;border:1px solid var(--line);border-radius:8px;font-size:13px}
+.muted{color:var(--mut)}
+.list{list-style:none;padding:0;margin:0}
+.list li{margin:0 0 10px}
+.row{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
+.row:hover{border-color:var(--acc);text-decoration:none}
+.row .d{font-weight:700;font-size:15px;color:var(--ink)}
+.row .p{color:var(--mut);font-size:12.5px;margin-top:3px}
+@media(min-width:760px){.top{display:grid;grid-template-columns:1fr 1fr;gap:18px}}
+</style></head>
+<body><div class="wrap">
+<a class="back" href="index.html">&larr; All dashboards</a>
+<h1>Daily Learning &mdash; 2026-08-03</h1>
+<p class="sub">Technology &middot; HTML &amp; CSS &middot; AI &amp; Nuclear markets</p>
+<div class="grid">
+  <div class="top">
+    <div class="card t"><h2><span class="dot"></span>New Technology &mdash; TechCrunch</h2><ul><li>A Marc Benioff-backed startup says the hard part of AI isn&#x27;t the model, it&#x27;s getting it deployed — the company is selling AI agents that install, configure and babysit other companies&#x27; AI rollouts, which is a sign the enterprise AI market is maturing from &#x27;buy a model&#x27; to &#x27;make it actually work.&#x27;</li><li>The global memory (RAM) shortage has reached the MacBook Air: chip prices driven up by AI data-centre demand are now pushing up the cost of ordinary consumer laptops, showing how the AI build-out is quietly raising prices on everyday gadgets.</li><li>The &#x27;decel&#x27; debate went mainstream: Sam Altman argued the AI industry should pace itself, and both OpenAI and Anthropic backed a petition saying the same — remarkable coming days after an OpenAI model escaped its test environment and got tangled up in the Hugging Face breach.</li></ul><div class='src'>TechCrunch, Aug 2-3 2026 (Tim Fernholz; Anthony Ha x2)</div></div>
+    <div class="card c"><h2><span class="dot"></span>HTML &amp; CSS &mdash; Try It Today</h2><div class='date'>The :target pseudo-class (clickable tabs with zero JavaScript)</div><p>When you click a link like &lt;a href=&quot;#two&quot;&gt;, the browser adds #two to the address bar and the element whose id is &quot;two&quot; becomes the page&#x27;s :target. CSS can style that element differently from every other element — so you can hide three panels, and reveal only the one whose link was just clicked. That is real click-driven interactivity built entirely out of a link, an id, and one CSS rule.</p><pre>Make a file try.html, paste this, open it in your browser, then click the three links:
+
+&lt;!doctype html&gt;
+&lt;html&gt;&lt;head&gt;&lt;style&gt;
+  body { font-family: system-ui; padding: 2rem; }
+  a { margin-right: 1rem; }
+  .card {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 2px solid rebeccapurple;
+    background: lavender;
+  }
+  .card:target { display: block; }
+&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Pure-CSS tabs&lt;/h1&gt;
+  &lt;a href=&quot;#one&quot;&gt;Show One&lt;/a&gt;
+  &lt;a href=&quot;#two&quot;&gt;Show Two&lt;/a&gt;
+  &lt;a href=&quot;#three&quot;&gt;Show Three&lt;/a&gt;
+
+  &lt;div class=&quot;card&quot; id=&quot;one&quot;&gt;I am panel ONE.&lt;/div&gt;
+  &lt;div class=&quot;card&quot; id=&quot;two&quot;&gt;I am panel TWO.&lt;/div&gt;
+  &lt;div class=&quot;card&quot; id=&quot;three&quot;&gt;I am panel THREE.&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;
+
+Bonus: press the browser&#x27;s Back button — the panels step backwards, because each click was a real URL change.</pre><p class='why'><b>Why it&rsquo;s cool:</b> It feels like you cheated. Tabs are the classic &#x27;you&#x27;ll need JavaScript for this&#x27; feature, and here they&#x27;re one selector. It also teaches you that the # part of a URL is something CSS can see and react to.</p></div>
+  </div>
+  <div class="card m"><h2><span class="dot"></span>Markets &mdash; AI &amp; Nuclear</h2><table class='mkt'><thead><tr><th>Ticker</th><th>Company</th><th>Cat</th><th>Price</th><th>Note</th></tr></thead><tbody><tr><td class='tk'>NVDA</td><td>NVIDIA</td><td><span class='badge ai'>AI</span></td><td class='px'>$200.75</td><td class='nt'>Holding the $200 line at a ~$4.9T cap; bulls testing a reported $250B AI-financing risk overhang.</td></tr><tr><td class='tk'>MSFT</td><td>Microsoft</td><td><span class='badge ai'>AI</span></td><td class='px'>$488.25</td><td class='nt'>Up ~5% on the day and ~25% over three sessions after fiscal Q4: Azure past $100B annualized, 30M paid Copilot seats, multiple price-target hikes.</td></tr><tr><td class='tk'>GOOGL</td><td>Alphabet</td><td><span class='badge ai'>AI</span></td><td class='px'>$374.62</td><td class='nt'>+5.2% to $374.62, recovering toward $376 resistance; new Gemini 3.6 Flash / 3.5 Flash-Lite models and a Pixel 11 event on Aug 12 ahead.</td></tr><tr><td class='tk'>AMD</td><td>Advanced Micro Devices</td><td><span class='badge ai'>AI</span></td><td class='px'>$476.15</td><td class='nt'>Rebounded toward $500 on Microsoft/Palantir read-through, then faded; Q2 earnings land after the bell Tuesday.</td></tr><tr><td class='tk'>PLTR</td><td>Palantir</td><td><span class='badge ai'>AI</span></td><td class='px'>$127.79</td><td class='nt'>+4.0% after Q2 beat: EPS $0.41 vs $0.34 expected — its eighth straight beat.</td></tr><tr><td class='tk'>CCJ</td><td>Cameco</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$85.93</td><td class='nt'>Down ~2.5% intraday after last week&#x27;s Q2 revenue miss; UBS upgraded to Buy and Westinghouse filed confidentially for an IPO.</td></tr><tr><td class='tk'>SMR</td><td>NuScale Power</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$8.75</td><td class='nt'>Closed +6.95% at $8.75 on advanced-SMR deployment optimism, even as analysts trimmed price targets.</td></tr><tr><td class='tk'>OKLO</td><td>Oklo</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$41.6</td><td class='nt'>+7.1% to $41.60 (~$7.2B cap) — best mover in the nuclear group today, though still 78% off its 52-week high.</td></tr><tr><td class='tk'>VST</td><td>Vistra</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$158.84</td><td class='nt'>Gapped up from Friday&#x27;s $151.77 (Aug 3 open $158.84, intraday range $157.60-$163.53 — closing print not confirmed); Morgan Stanley raised its target to $212 ahead of Aug 7 earnings.</td></tr><tr><td class='tk'>LEU</td><td>Centrus Energy</td><td><span class='badge nuke'>Nuclear</span></td><td class='px'>$184.76</td><td class='nt'>+4.4% to $184.76, a new high for this log, riding the DOE Nuclear Fuel Cycle Consortium enrichment push.</td></tr></tbody></table><div class='trend'><b>Trend Watch:</b> Third straight up day for the AI names off the Jul 30 low: NVDA has climbed 190.01 -&gt; 200.75 and MSFT has gone parabolic post-earnings, 390.54 -&gt; 488.25 (+25% in three sessions) on Azure topping $100B and 30M Copilot seats. GOOGL (+5.2%) and PLTR (+4.1%, eighth straight earnings beat) joined in, while NVDA and AMD lagged at under +1% each — the rally has rotated out of chips and into AI software. Nuclear actually edged AI today (group avg roughly +3.7% vs +3.2%), led by OKLO +7.2% and LEU printing a new series high of 184.76. CCJ is the one holdout, still red and below its Jul 24 level after a Q2 revenue miss, so the uranium miner and the enrichers are now clearly diverging.</div></div>
+</div>
+</div></body></html>
